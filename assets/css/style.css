@@ -82,7 +82,7 @@ body.dark .hamburger span {
   justify-content: center;
 
   text-align: center;
-  padding-top: 80px; /* jarak aman dari navbar */
+  padding: 120px 0 80px; /* jarak aman dari navbar */
 }
 
 .hero-overlay {
@@ -326,4 +326,92 @@ body.dark .footer {
 body.menu-open .theme-toggle {
   opacity: 0;
   pointer-events: none;
+}
+
+.section {
+  padding: 120px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* jarak antar section lebih terasa */
+.section + .section {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* judul section */
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1f3c88;
+}
+
+/* paragraf section */
+.section p {
+  max-width: 820px;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+body.dark .section p {
+  color: #d1d5db;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-more {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f3c88;
+  border-bottom: 2px solid #1f3c88;
+}
+
+body.dark .btn-more {
+  color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+.section {
+  padding: 120px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* jarak antar section lebih terasa */
+.section + .section {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* judul section */
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1f3c88;
+}
+
+/* paragraf section */
+.section p {
+  max-width: 820px;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.btn-more {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 600;
+  color: #1f3c88;
+  text-decoration: none;
+  border-bottom: 2px solid #1f3c88;
+  padding-bottom: 4px;
+}
+
+.btn-more:hover {
+  opacity: 0.75;
 }
