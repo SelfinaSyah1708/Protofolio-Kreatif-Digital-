@@ -2,38 +2,29 @@ const hamburger = document.getElementById("hamburger");
 const sideMenu = document.getElementById("sideMenu");
 const closeMenu = document.getElementById("closeMenu");
 const overlay = document.getElementById("menuOverlay");
-
-hamburger.onclick = () => {
-  sideMenu.classList.add("active");
-  overlay.classList.add("active");
-};
-
-closeMenu.onclick = () => {
-  sideMenu.classList.remove("active");
-  overlay.classList.remove("active");
-};
-
-overlay.onclick = () => {
-  sideMenu.classList.remove("active");
-  overlay.classList.remove("active");
-};
-
 const themeToggle = document.getElementById("themeToggle");
 
-// cek mode tersimpan
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-  themeToggle.textContent = "☀️";
+/* BUKA MENU */
+hamburger.addEventListener("click", () => {
+  sideMenu.classList.add("active");
+  overlay.classList.add("active");
+  document.body.classList.add("menu-open"); // 🔑 INI KUNCI
+});
+
+/* TUTUP MENU */
+function closeSideMenu() {
+  sideMenu.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("menu-open"); // 🔑
 }
 
+closeMenu.addEventListener("click", closeSideMenu);
+overlay.addEventListener("click", closeSideMenu);
+
+/* DARK / LIGHT MODE */
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    themeToggle.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
+  themeToggle.textContent = document.body.classList.contains("dark")
+    ? "☀️"
+    : "🌙";
 });

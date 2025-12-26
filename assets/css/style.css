@@ -1,3 +1,6 @@
+/* ===============================
+   RESET & GLOBAL
+=============================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,71 +11,65 @@
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ===== NAVBAR ===== */
+/* ===============================
+   HEADER & NAVBAR
+=============================== */
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
-  background: transparent;
+  width: 100%;
   z-index: 1000;
-  box-shadow: none;
+  background: transparent;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 40px;
 }
 
 .logo {
-  font-weight: bold;
   font-size: 20px;
+  font-weight: bold;
 }
 
-.nav-menu {
-  position: absolute;
-  top: 70px;
-  right: 40px;
-  background: white;
-  flex-direction: column;
-  width: 220px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  display: none;
-  gap: 15px;
-  list-style: none;
-}
-
-.nav-menu li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-}
-
-.nav-menu.active {
-  display: flex;
-}
-
-/* ===== HAMBURGER ===== */
+/* ===============================
+   HAMBURGER
+=============================== */
 .hamburger {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   cursor: pointer;
+  gap: 5px; /* ganti margin manual */
+  padding: 6px; /* biar area klik enak */
 }
 
 .hamburger span {
-  width: 20px;
+  width: 18px; /* sedikit lebih kecil & elegan */
   height: 2px;
-  background: #1f3c88;
-  margin: 4px 0;
+  background-color: #1f3c88;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* ===== HERO ===== */
+/* Hover effect (halus, profesional) */
+.hamburger:hover span {
+  opacity: 0.85;
+}
+
+/* Dark mode */
+body.dark .hamburger span {
+  background-color: #e5e7eb;
+}
+
+/* ===============================
+   HERO SECTION
+=============================== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -85,11 +82,9 @@ body {
   justify-content: center;
 
   text-align: center;
-
-  padding-top: 0px; /* ⬅️ DIPERKECIL (kunci utama) */
+  padding-top: 80px; /* jarak aman dari navbar */
 }
 
-/* OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -97,7 +92,6 @@ body {
   z-index: 1;
 }
 
-/* KONTEN HERO */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -106,15 +100,13 @@ body {
   margin: 0 auto;
 }
 
-/* JUDUL */
 .hero-content h1 {
   font-size: 48px;
   line-height: 1.2;
-  margin-bottom: 20px; /* ⬅️ DIRAPIKAN */
+  margin-bottom: 18px;
   color: #1f3c88;
 }
 
-/* DESKRIPSI */
 .hero-content p {
   font-size: 18px;
   line-height: 1.8;
@@ -123,18 +115,64 @@ body {
   margin: 0 auto;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #f5f7fa;
+/* ===============================
+   CONTENT ANIMATION
+=============================== */
+.content-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===============================
-   SIDE MENU (OFF CANVAS)
-   =============================== */
+   TYPEWRITER EFFECT
+=============================== */
+.typewriter {
+  display: inline-block;
+}
 
-/* OVERLAY */
+.typewriter .title-main {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+
+  clip-path: inset(0 100% 0 0);
+  animation: typing 3.8s steps(28, end) forwards;
+}
+
+.typewriter .title-main::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #1f3c88;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===============================
+   OVERLAY
+=============================== */
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -150,8 +188,9 @@ body {
   visibility: visible;
 }
 
-/* SIDE MENU */
-/* ===== SIDE MENU ===== */
+/* ===============================
+   SIDE MENU
+=============================== */
 .side-menu {
   position: fixed;
   top: 0;
@@ -162,17 +201,21 @@ body {
   color: #ffffff;
   padding: 28px;
 
-  transform: translateX(100%); /* ⬅️ sembunyi */
+  transform: translateX(100%);
   transition: transform 0.35s ease;
-
-  z-index: 1000;
+  z-index: 999;
 }
 
 .side-menu.active {
-  transform: translateX(0); /* ⬅️ muncul */
+  transform: translateX(0);
 }
 
-/* ===== HEADER ===== */
+/* SEMBUNYIKAN THEME TOGGLE SAAT MENU AKTIF */
+.side-menu.active ~ .header .theme-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .side-header {
   position: relative;
   text-align: center;
@@ -191,14 +234,11 @@ body {
   font-size: 32px;
   cursor: pointer;
   color: #ffffff;
-  z-index: 1001; /* ⬅️ WAJIB lebih tinggi dari side-menu */
 }
 
-/* ===== MENU LIST ===== */
 .side-nav {
   list-style: none;
   margin-top: 40px;
-  padding: 0;
 }
 
 .side-nav li {
@@ -212,92 +252,43 @@ body {
   transition: color 0.2s ease;
 }
 
-.side-nav a.active,
-.side-nav a:hover {
+.side-nav a:hover,
+.side-nav a.active {
   color: #ffffff;
 }
 
-/* MATIKAN MENU LAMA TOTAL */
-.nav-menu {
-  display: none !important;
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f5f7fa;
 }
 
 /* ===============================
-   CONTENT WRAPPER ANIMATION
-   =============================== */
-
-.content-wrapper {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1.2s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.content-wrapper h1 {
-  animation: fadeUp 1s ease forwards;
-}
-
-.content-wrapper p {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-/* ===============================
-   TYPEWRITER EFFECT (CSS ONLY)
-   =============================== */
-
-.typewriter .title-main,
-.typewriter .title-sub {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #1f3c88;
-  animation: typing 6s steps(40, end), blink 1s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 60%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* ===== THEME TOGGLE ===== */
+   THEME TOGGLE
+=============================== */
 .theme-toggle {
   cursor: pointer;
   font-size: 18px;
-  margin-right: 16px;
   user-select: none;
+  transition: opacity 0.25s ease;
 }
 
-/* ===== DARK MODE ===== */
+.theme-toggle:hover {
+  transform: rotate(20deg);
+  opacity: 0.9;
+}
+
+/* ===============================
+   DARK MODE
+=============================== */
 body.dark {
   background: #0f172a;
   color: #e5e7eb;
 }
 
-/* HEADER */
-body.dark .header {
-  background: transparent;
-}
-
-/* HERO */
 body.dark .hero-overlay {
   background: rgba(15, 23, 42, 0.85);
 }
@@ -310,12 +301,29 @@ body.dark .hero-content p {
   color: #d1d5db;
 }
 
-/* HAMBURGER */
 body.dark .hamburger span {
   background: #e5e7eb;
 }
 
-/* SIDE MENU */
 body.dark .side-menu {
   background: #020617;
+}
+
+body.dark .footer {
+  background: #020617;
+  color: #94a3b8;
+}
+
+/* ===============================
+   NAV ACTIONS (RIGHT SIDE)
+=============================== */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* jarak 🌙 dan hamburger */
+}
+/* SEMBUNYIKAN THEME TOGGLE SAAT MENU TERBUKA */
+body.menu-open .theme-toggle {
+  opacity: 0;
+  pointer-events: none;
 }
