@@ -11,21 +11,14 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
+
   <body>
     <!-- ===== NAVBAR ===== -->
     <header class="header">
       <nav class="navbar">
         <div class="logo">Kelompok 3</div>
 
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="pages/projects.html">Projects</a></li>
-          <li><a href="pages/blog.html">Blog</a></li>
-          <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-
-        <!-- Hamburger -->
+        <!-- HAMBURGER -->
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -34,14 +27,33 @@
       </nav>
     </header>
 
+    <!-- ===== OVERLAY ===== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== SIDE MENU ===== -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>Kelompok 3</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
+
+      <ul class="side-nav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/projects.html">Portfolio</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
       <div class="hero-overlay"></div>
 
-      <div class="hero-content">
-        <h1>
+      <!-- 👇 FIXED CLASS NAME -->
+      <div class="hero-content content-wrapper">
+        <h1 class="typewriter">
           <span class="title-main">Portofolio Kreatif Digital</span><br />
-          <span class="title-sub">Developer</span>
         </h1>
 
         <p>
