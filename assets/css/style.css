@@ -417,6 +417,9 @@ body.dark .btn-more {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
 /* ABOUT */
 /* ===== ABOUT SECTION ===== */
 .about-section {
@@ -822,7 +825,11 @@ body.dark .team-card span {
 }
 
 /* ===== CLOSE BUTTON ===== */
+<<<<<<< HEAD
 .btn-close { 
+=======
+.btn-close {
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
   position: fixed;
   top: 90px;
   right: 32px;
@@ -885,7 +892,11 @@ body.dark .btn-close {
     right: 20px;
   }
 }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
 /* Galeri proyek */
 .gallery {
   display: grid;
@@ -938,7 +949,11 @@ body.dark .btn-close {
 }
 
 .modal-content img {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 85%;
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -955,6 +970,7 @@ body.dark .btn-close {
 .close:hover {
   color: red;
 }
+<<<<<<< HEAD
 
 /* ===============================
    RESET & FONT
@@ -1199,3 +1215,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+=======
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
