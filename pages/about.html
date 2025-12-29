@@ -23,6 +23,7 @@
 
         <div class="nav-actions">
           <div class="theme-toggle" id="themeToggle">🌙</div>
+<<<<<<< HEAD
           <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -48,11 +49,44 @@
         <li><a href="../index.html">Home</a></li>
         <li><a class="active" href="about.html">About</a></li>
         <li><a href="projects.html">Portfolio</a></li>
+=======
+
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <button class="btn-close" onclick="history.back()">✕</button>
+
+    <!-- ===== OVERLAY ===== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== SIDE MENU ===== -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
+
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+<<<<<<< HEAD
+        <li><a href="projects.html">Portfolio</a></li>
+=======
+        <li><a href="project.html">Project</a></li>
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
+>>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
+<<<<<<< HEAD
     <section class="about-detail">
       <div class="detail-wrapper">
         <div class="detail-card vertical" id="profileCard">
@@ -166,10 +200,81 @@
           dengan kebutuhan bisnis.
           </p><br>
       `,
+=======
+    <!-- ===== ABOUT DETAIL ===== -->
+    <section class="about-detail">
+      <div class="detail-wrapper">
+        <div class="detail-card">
+          <img id="profileImg" alt="Foto Anggota" />
+
+          <h2 id="profileName"></h2>
+          <p class="role" id="profileRole"></p>
+
+          <div class="detail-content" id="profileContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="../assets/js/navigation.js"></script>
+
+    <!-- ===== SCRIPT MEMBER ===== -->
+    <script>
+      const members = {
+        selfina: {
+          name: "Selfina Syah Darma",
+          role: "Frontend Developer",
+          img: "https://i.pravatar.cc/300?img=2",
+          content: `
+            <h4>Pendidikan</h4>
+            <ul>
+              <li>S1 Sistem Informasi</li>
+            </ul>
+
+            <h4>Keahlian</h4>
+            <p>HTML, CSS, JavaScript</p>
+
+            <h4>Visi</h4>
+            <p>
+              Membangun antarmuka web yang modern, responsif, dan mudah digunakan.
+            </p>
+          `,
+        },
+
+        imma: {
+          name: "Imma Latunnir Rilla",
+          role: "UI/UX Designer",
+          img: "https://i.pravatar.cc/300?img=1",
+          content: `
+            <h4>Keahlian</h4>
+            <p>UI Design, UX Research, Prototyping</p>
+
+            <h4>Visi</h4>
+            <p>
+              Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
+            </p>
+          `,
+        },
+
+        salsa: {
+          name: "Salsabilla Febriyanti",
+          role: "System Analyst",
+          img: "https://i.pravatar.cc/300?img=3",
+          content: `
+            <h4>Keahlian</h4>
+            <p>Analisis Sistem, Dokumentasi</p>
+          `,
+>>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
         },
 
         fakhri: {
           name: "Muhammad Fakhri Ramadhan",
+<<<<<<< HEAD
           role: "UI/UX Designer",
           img: "../assets/images/fakhri.jpeg",
           content: `
@@ -205,10 +310,19 @@
           perbaikan sistem berjalan optimal.
         </p><br>
       `,
+=======
+          role: "Quality Assurance",
+          img: "https://i.pravatar.cc/300?img=4",
+          content: `
+            <h4>Keahlian</h4>
+            <p>Testing, Quality Control</p>
+          `,
+>>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
         },
       };
 
       const params = new URLSearchParams(window.location.search);
+<<<<<<< HEAD
       const member = params.get("member");
 
       if (members[member]) {
@@ -223,3 +337,23 @@
     <script src="../assets/js/navigation.js"></script>
   </body>
 </html>
+=======
+      const memberKey = params.get("member");
+
+      if (members[memberKey]) {
+        document.getElementById("profileImg").src = members[memberKey].img;
+        document.getElementById("profileName").innerText =
+          members[memberKey].name;
+        document.getElementById("profileRole").innerText =
+          members[memberKey].role;
+        document.getElementById("profileContent").innerHTML =
+          members[memberKey].content;
+      }
+    </script>
+  </body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
+>>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86

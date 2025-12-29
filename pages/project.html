@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects | DIGIVORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">DIGIVORA</div>
+
+        <div class="nav-actions">
+          <div class="theme-toggle" id="themeToggle">🌙</div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== OVERLAY ===== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== SIDE MENU ===== -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
+
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content content-wrapper">
+        <h1>Our Projects</h1>
+        <p>Karya dan proyek digital yang telah kami kerjakan.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT LIST ===== -->
+    <section class="section">
+      <h2>Project</h2>
+      <p>Berikut beberapa proyek unggulan yang pernah kami kembangkan.</p>
+
+      <!-- Project Card 1-->
+                           <div class="gallery">
+                                <div class="project" onclick="openModal('modal1')">
+                                <img src="../assets/images/P1.jpeg" alt="Proyek 1" width="150" height="250">
+                                </div>
+
+                                <div class="project" onclick="openModal('modal2')">
+                                <img src="../assets/images/p2.jpeg" alt="Proyek 2" width="150" height="250">
+                                </div>
+
+                                <div class="project" onclick="openModal('modal3')">
+                                <img src="../assets/images/P3.jpeg" alt="Proyek 3" width="150" height="250">
+                                </div>
+
+                                <div class="project" onclick="openModal('modal4')">
+                                <img src="assets/Porto.png" alt="Proyek 4" width="150" height="250">
+                                </div>
+                            </div>
+
+                            <!-- Modal 1 -->
+                            <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                                <img src="../assets/images/P1.jpeg" alt="Proyek 1">
+                                <h2>CakeHub</h2>
+                                <center><p>CakeHub adalah platform e-commerce yang menghadirkan berbagai pilihan kue basah tradisional khas Indonesia, langsung dari dapur UMKM lokal ke tangan Anda. Dengan tampilan yang ramah pengguna dan sistem pembayaran yang aman, CakeHub memudahkan pelanggan untuk menjelajahi, memesan, dan menikmati cita rasa autentik seperti klepon, kue lapis, lemper, dan banyak lagi. semuanya dikemas segar dan higienis. Cocok untuk kebutuhan harian, acara spesial, atau sekadar memanjakan lidah.</p></center>
+                                    <a href="" wight="150" hight="250">Read Project</a>
+                                </div>
+                            </div>
+
+                            <!-- Modal 2 -->
+                            <div id="modal2" class="modal">
+                                <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                                <img src="../assets/images/p2.jpeg" alt="Proyek 2">
+                                <h2>PetShop Ku</h2>
+                                <center><p>PETSHOPKU adalah platform digital modern yang dirancang untuk memudahkan pengguna dalam berbelanja kebutuhan hewan peliharaan secara cepat, aman, dan terpercaya. </p></center>
+                                    <a href="https://immalathun.github.io/Petshop-ku/" wight="250" hight="250">Read Project</a>
+                                </div>
+                            </div>
+
+                            <!-- Modal 3 -->
+                            <div id="modal3" class="modal">
+                                <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                                <img src="../assets/images/P3.jpeg" alt="Proyek 3">
+                                <h2>MoodMeal</h2>
+                                <center><p>MoodMeal adalah aplikasi berbasis web yang dirancang untuk membantu pengguna memilih menu makanan berdasarkan suasana hati mereka. Dengan antarmuka yang intuitif dan menarik, MoodMeal memberikan rekomendasi makanan yang sesuai dengan mood pengguna, sehingga meningkatkan pengalaman makan mereka.</p></center>
+                                <a href="https://www.figma.com/make/rkkI61dhuU6Biw1ESfsGIG/Mood-Based-Food-Prototype?t=oX2ix4peS6KiI5Bp-1" wight="250" hight="250">Read Project</a>
+                                </div>
+                            </div>
+
+                              <!-- Modal 4 -->
+                            <div id="modal4" class="modal">
+                                <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                                <img src="../assets/images/.jpeg" alt="Proyek 4">
+                                <h2>CakeHub</h2>
+                                <center><p>CakeHub adalah platform e-commerce yang menghadirkan berbagai pilihan kue basah tradisional khas Indonesia, langsung dari dapur UMKM lokal ke tangan Anda. Dengan tampilan yang ramah pengguna dan sistem pembayaran yang aman, CakeHub memudahkan pelanggan untuk menjelajahi, memesan, dan menikmati cita rasa autentik seperti klepon, kue lapis, lemper, dan banyak lagi. semuanya dikemas segar dan higienis. Cocok untuk kebutuhan harian, acara spesial, atau sekadar memanjakan lidah.</p></center>
+                                    <a href="" wight="150" hight="250">Read Project</a>
+                                </div>
+                            </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="../assets/js/navigation.js"></script>
+  </body>
+</html>

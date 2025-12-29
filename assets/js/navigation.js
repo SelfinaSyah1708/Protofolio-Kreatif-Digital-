@@ -72,4 +72,8 @@ window.onclick = function(event) {
     }
   });
   
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
