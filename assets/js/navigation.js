@@ -64,12 +64,11 @@ function closeModal(id) {
 }
 
 // Tutup modal jika klik di luar konten
-window.onclick = function(event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
+window.onclick = function (event) {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
-  
-}
+};
