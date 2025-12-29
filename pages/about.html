@@ -23,7 +23,6 @@
 
         <div class="nav-actions">
           <div class="theme-toggle" id="themeToggle">🌙</div>
-
           <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -48,22 +47,16 @@
       <ul class="side-nav">
         <li><a href="../index.html">Home</a></li>
         <li><a class="active" href="about.html">About</a></li>
-<<<<<<< HEAD
         <li><a href="projects.html">Portfolio</a></li>
-=======
-        <li><a href="project.html">Project</a></li>
->>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
-    <!-- ===== ABOUT DETAIL ===== -->
     <section class="about-detail">
       <div class="detail-wrapper">
-        <div class="detail-card">
-          <img id="profileImg" alt="Foto Anggota" />
-
+        <div class="detail-card vertical" id="profileCard">
+          <img id="profileImg" class="profile-img" />
           <h2 id="profileName"></h2>
           <p class="role" id="profileRole"></p>
 
@@ -78,83 +71,81 @@
     </footer>
 
     <!-- JS -->
-    <script src="../assets/js/navigation.js"></script>
-
-    <!-- ===== SCRIPT MEMBER ===== -->
     <script>
       const members = {
-        selfina: {
-          name: "Selfina Syah Darma",
-          role: "Frontend Developer",
-          img: "https://i.pravatar.cc/300?img=2",
-          content: `
-            <h4>Pendidikan</h4>
-            <ul>
-              <li>S1 Sistem Informasi</li>
-            </ul>
-
-            <h4>Keahlian</h4>
-            <p>HTML, CSS, JavaScript</p>
-
-            <h4>Visi</h4>
-            <p>
-              Membangun antarmuka web yang modern, responsif, dan mudah digunakan.
-            </p>
-          `,
-        },
-
         imma: {
           name: "Imma Latunnir Rilla",
           role: "UI/UX Designer",
-          img: "https://i.pravatar.cc/300?img=1",
+          img: "../assets/images/imma.jpg",
           content: `
-            <h4>Keahlian</h4>
-            <p>UI Design, UX Research, Prototyping</p>
+        <h4>Keahlian</h4>
+        <p>UI Design, UX Research, Prototyping</p>
 
-            <h4>Visi</h4>
-            <p>
-              Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
-            </p>
-          `,
+        <h4>Visi</h4>
+        <p>
+          Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
+        </p>
+      `,
+        },
+
+        selfina: {
+          name: "Selfina Syah Darma",
+          role: "Frontend Developer",
+          img: "../assets/images/selfina.jpg",
+          content: `
+        <h4>Keahlian</h4>
+        <p>HTML, CSS, JavaScript</p>
+
+        <h4>Visi</h4>
+        <p>
+          Membangun antarmuka web yang modern, responsif, dan mudah digunakan.
+        </p>
+      `,
         },
 
         salsa: {
-          name: "Salsabilla Febriyanti",
-          role: "System Analyst",
-          img: "https://i.pravatar.cc/300?img=3",
+          name: "Salsabila Febriyanti",
+          role: "UI/UX Designer",
+          img: "../assets/images/salsa.jpg",
           content: `
-            <h4>Keahlian</h4>
-            <p>Analisis Sistem, Dokumentasi</p>
-          `,
+        <h4>Keahlian</h4>
+        <p>UI Design, UX Research, Prototyping</p>
+
+        <h4>Visi</h4>
+        <p>
+          Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
+        </p>
+      `,
         },
 
         fakhri: {
           name: "Muhammad Fakhri Ramadhan",
-          role: "Quality Assurance",
-          img: "https://i.pravatar.cc/300?img=4",
+          role: "UI/UX Designer",
+          img: "../assets/images/fakhri.jpg",
           content: `
-            <h4>Keahlian</h4>
-            <p>Testing, Quality Control</p>
-          `,
+        <h4>Keahlian</h4>
+        <p>UI Design, UX Research, Prototyping</p>
+
+        <h4>Visi</h4>
+        <p>
+          Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
+        </p>
+      `,
         },
       };
 
       const params = new URLSearchParams(window.location.search);
-      const memberKey = params.get("member");
+      const member = params.get("member");
 
-      if (members[memberKey]) {
-        document.getElementById("profileImg").src = members[memberKey].img;
-        document.getElementById("profileName").innerText =
-          members[memberKey].name;
-        document.getElementById("profileRole").innerText =
-          members[memberKey].role;
+      if (members[member]) {
+        document.getElementById("profileImg").src = members[member].img;
+        document.getElementById("profileName").innerText = members[member].name;
+        document.getElementById("profileRole").innerText = members[member].role;
         document.getElementById("profileContent").innerHTML =
-          members[memberKey].content;
+          members[member].content;
       }
     </script>
+
+    <script src="../assets/js/navigation.js"></script>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 5b0bebf0ba5d1576fed71000f7db61448d3940a2
