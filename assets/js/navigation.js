@@ -55,6 +55,7 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+
 function openModal(id) {
   document.getElementById(id).style.display = "flex";
 }
@@ -72,3 +73,4 @@ window.onclick = function(event) {
     }
   });
   
+}
