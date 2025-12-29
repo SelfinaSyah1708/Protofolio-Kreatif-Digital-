@@ -416,7 +416,6 @@ body.dark .btn-more {
   opacity: 0.75;
 }
 
-<<<<<<< HEAD
 /* ABOUT */
 /* ===== ABOUT SECTION ===== */
 .about-section {
@@ -885,7 +884,7 @@ body.dark .btn-close {
     right: 20px;
   }
 }
-=======
+
 /* Galeri proyek */
 .gallery {
   display: grid;
@@ -955,4 +954,3 @@ body.dark .btn-close {
 .close:hover {
   color: red;
 }
->>>>>>> c300286b1997c9d10806fe8b32707afb68f5c587
