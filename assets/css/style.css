@@ -489,7 +489,7 @@ body.dark .btn-more {
 /* FOTO */
 .team-card img {
   width: 100%;
-  height: 210px; /* ⬅️ dipendekin */
+  height: 210px; 
   object-fit: cover;
   border-radius: 14px;
 }
@@ -497,7 +497,7 @@ body.dark .btn-more {
 /* ICON BULAT (NEMPEL KE FOTO) */
 .team-icon {
   position: absolute;
-  top: 200px; /* ⬅️ posisi pas di bawah foto */
+  top: 200px; 
   left: 50%;
   transform: translateX(-50%);
   width: 52px;
@@ -937,11 +937,11 @@ body.dark .btn-close {
 }
 
 .modal-content img {
-<<<<<<< HEAD
+
   width: 100%;
-=======
+
   width: 85%;
->>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
+
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -959,7 +959,7 @@ body.dark .btn-close {
   color: red;
 }
 
-<<<<<<< HEAD
+
 .detail-card.center {
   text-align: center;
 }
@@ -1023,7 +1023,7 @@ body.dark .btn-close {
   border: 6px solid #e6efff;
   margin-bottom: 20px;
 }
-=======
+
 /* ===== BLOG SECTION ===== */
 .blog-section {
   padding: 80px 20px;
@@ -1235,4 +1235,183 @@ body.dark .btn-close {
     grid-template-columns: 1fr;
   }
 }
->>>>>>> a4fbbf6a82f15c393a1b5f98873d933322fc5a86
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* DETAIL CARD (GLOBAL) */
+/* ============================= */
+.detail-card.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 40px;
+  border-radius: 24px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ============================= */
+/* FOTO PROFIL (RESPONSIVE & CANTIK) */
+/* ============================= */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover; /* anti ketarik */
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: 24px 0;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* MATIKAN CSS IMG GLOBAL */
+.detail-card.vertical img {
+  width: auto !important;
+  max-width: none !important;
+  height: auto;
+}
+
+/* ============================= */
+/* NAMA */
+/* ============================= */
+#profileName {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* ROLE */
+/* ============================= */
+.role {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* DETAIL CONTENT */
+/* ============================= */
+.detail-content {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.detail-content p {
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+body:not(.light) .detail-card.vertical {
+  background: linear-gradient(180deg, #4fbacf, #a09ce4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+body:not(.light) #profileName {
+  color: #052859;
+}
+
+body:not(.light) .role {
+  color: #01050b;
+}
+
+body:not(.light) .detail-content {
+  color: #d1d5db;
+}
+
+/* ============================= */
+/* LIGHT MODE */
+/* ============================= */
+body.light .detail-card.vertical {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+body.light #profileName {
+  color: #1f73bc;
+}
+
+body.light .role {
+  color: #010617;
+}
+
+body.light .detail-content {
+  color: #334155;
+}
+
+body.light .profile-img {
+  border: 4px solid #e5e7eb;
+}
+
+body.light .about-detail {
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+}
+
+/* ============================= */
+/* RESPONSIVE - TABLET */
+/* ============================= */
+@media (max-width: 1024px) {
+  .detail-card.vertical {
+    padding: 50px 30px;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  #profileName {
+    font-size: 28px;
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE - HP */
+/* ============================= */
+@media (max-width: 600px) {
+  .detail-card.vertical {
+    padding: 40px 20px;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  #profileName {
+    font-size: 24px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .detail-content {
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+/* PAKSA FOTO PROFIL IKUT UKURAN SENDIRI */
+img.profile-img {
+  width: 160px !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
