@@ -1,110 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us | Digital Professional Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About | DIGIVORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ===== NAVBAR ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">PORTFOLIO</div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#team" class="nav-link">Team</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">DIGIVORA</div>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-</header>
+        <div class="nav-actions">
+          <div class="theme-toggle" id="themeToggle">🌙</div>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
-  <h1>Our Professional Team</h1>
-  <p>Digital Portfolio – Creative & Professional</p>
-</section>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p class="section-desc">
-    Kami adalah tim mahasiswa yang berfokus pada pengembangan web dan desain digital profesional.
-  </p>
-</section>
+    <button class="btn-close" onclick="history.back()">✕</button>
 
-<!-- ===== TEAM ===== -->
-<section id="team" class="section team-section">
-  <h2>Team Members</h2>
+    <!-- ===== OVERLAY ===== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-  <div class="team-container">
+    <!-- ===== SIDE MENU ===== -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
 
-    <!-- Member 1 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=1" alt="anggota">
-      <h3>Ahmad Rizki</h3>
-      <p><b>Asal:</b> Padang</p>
-      <p><b>Jurusan:</b> Teknik Informatika</p>
-      <p><b>Pendidikan:</b> S1 Informatika</p>
-      <p><b>Skills:</b> HTML, CSS, JavaScript</p>
-      <p><b>Visi:</b> Web Developer Profesional</p>
-      <p><b>Soft Skills:</b> Kerja Tim, Komunikasi</p>
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
-    <!-- Member 2 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=2" alt="anggota">
-      <h3>Siti Aisyah</h3>
-      <p><b>Asal:</b> Bukittinggi</p>
-      <p><b>Jurusan:</b> Sistem Informasi</p>
-      <p><b>Pendidikan:</b> S1 Sistem Informasi</p>
-      <p><b>Skills:</b> UI/UX, Figma</p>
-      <p><b>Visi:</b> UI Designer Handal</p>
-      <p><b>Soft Skills:</b> Kreatif, Leadership</p>
-    </div>
+    <!-- ===== ABOUT DETAIL ===== -->
+    <section class="about-detail">
+      <div class="detail-wrapper">
+        <div class="detail-card">
+          <img id="profileImg" alt="Foto Anggota" />
 
-    <!-- Member 3 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=3" alt="anggota">
-      <h3>Andi Pratama</h3>
-      <p><b>Asal:</b> Solok</p>
-      <p><b>Jurusan:</b> Teknik Komputer</p>
-      <p><b>Pendidikan:</b> D4 Teknik Komputer</p>
-      <p><b>Skills:</b> Networking, Linux</p>
-      <p><b>Visi:</b> IT Support Profesional</p>
-      <p><b>Soft Skills:</b> Problem Solving</p>
-    </div>
+          <h2 id="profileName"></h2>
+          <p class="role" id="profileRole"></p>
 
-    <!-- Member 4 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=4" alt="anggota">
-      <h3>Dewi Lestari</h3>
-      <p><b>Asal:</b> Pariaman</p>
-      <p><b>Jurusan:</b> Manajemen Informatika</p>
-      <p><b>Pendidikan:</b> D3 MI</p>
-      <p><b>Skills:</b> Data Entry, Office</p>
-      <p><b>Visi:</b> Digital Administrator</p>
-      <p><b>Soft Skills:</b> Teliti, Disiplin</p>
-    </div>
+          <div class="detail-content" id="profileContent"></div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Email: teamportfolio@email.com</p>
-</section>
+    <!-- JS -->
+    <script src="../assets/js/navigation.js"></script>
 
-<script src="../assets/js/navigation.js"></script>
-</body>
+    <!-- ===== SCRIPT MEMBER ===== -->
+    <script>
+      const members = {
+        selfina: {
+          name: "Selfina Syah Darma",
+          role: "Frontend Developer",
+          img: "https://i.pravatar.cc/300?img=2",
+          content: `
+            <h4>Pendidikan</h4>
+            <ul>
+              <li>S1 Sistem Informasi</li>
+            </ul>
+
+            <h4>Keahlian</h4>
+            <p>HTML, CSS, JavaScript</p>
+
+            <h4>Visi</h4>
+            <p>
+              Membangun antarmuka web yang modern, responsif, dan mudah digunakan.
+            </p>
+          `,
+        },
+
+        imma: {
+          name: "Imma Latunnir Rilla",
+          role: "UI/UX Designer",
+          img: "https://i.pravatar.cc/300?img=1",
+          content: `
+            <h4>Keahlian</h4>
+            <p>UI Design, UX Research, Prototyping</p>
+
+            <h4>Visi</h4>
+            <p>
+              Menghasilkan desain antarmuka yang berfokus pada kenyamanan pengguna.
+            </p>
+          `,
+        },
+
+        salsa: {
+          name: "Salsabilla Febriyanti",
+          role: "System Analyst",
+          img: "https://i.pravatar.cc/300?img=3",
+          content: `
+            <h4>Keahlian</h4>
+            <p>Analisis Sistem, Dokumentasi</p>
+          `,
+        },
+
+        fakhri: {
+          name: "Muhammad Fakhri Ramadhan",
+          role: "Quality Assurance",
+          img: "https://i.pravatar.cc/300?img=4",
+          content: `
+            <h4>Keahlian</h4>
+            <p>Testing, Quality Control</p>
+          `,
+        },
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const memberKey = params.get("member");
+
+      if (members[memberKey]) {
+        document.getElementById("profileImg").src = members[memberKey].img;
+        document.getElementById("profileName").innerText =
+          members[memberKey].name;
+        document.getElementById("profileRole").innerText =
+          members[memberKey].role;
+        document.getElementById("profileContent").innerHTML =
+          members[memberKey].content;
+      }
+    </script>
+  </body>
 </html>

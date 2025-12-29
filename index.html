@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -18,7 +23,6 @@
       <nav class="navbar">
         <div class="logo">DIGIVORA</div>
 
-        <!-- RIGHT ACTION -->
         <div class="nav-actions">
           <div class="theme-toggle" id="themeToggle">🌙</div>
 
@@ -43,34 +47,222 @@
 
       <ul class="side-nav">
         <li><a class="active" href="#home">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/projects.html">Portfolio</a></li>
-        <li><a href="pages/blog.html">Blog</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#project">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO / HOME ===== -->
     <section class="hero" id="home">
       <div class="hero-overlay"></div>
 
       <div class="hero-content content-wrapper">
-        <!-- JUDUL TYPEWRITER -->
         <h1 class="typewriter">
           <span class="title-main">Portofolio Kreatif Digital</span>
         </h1>
 
-        <!-- TAGLINE -->
         <p class="hero-tagline">Digital Innovation & Creative Explorers</p>
 
-        <!-- DESKRIPSI -->
         <p class="hero-desc">
           Kami mengembangkan portofolio kreatif digital yang menampilkan ide,
-          keterampilan, dan hasil kerja tim. Dengan desain yang rapi dan solusi
-          inovatif, kami menghadirkan pengalaman digital yang menarik dan
-          fungsional.
+          keterampilan, dan hasil kerja tim dengan desain rapi dan solusi
+          inovatif.
         </p>
       </div>
+    </section>
+
+    <!-- ===== ABOUT PREVIEW (SCROLL) ===== -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <!-- HEADER -->
+        <div class="about-header center">
+          <h2>About Us</h2>
+          <p class="subtitle">Mahasiswa Sistem Informasi</p>
+        </div>
+
+        <!-- DESKRIPSI -->
+        <div class="about-content center">
+          <h3>Lets Check It Out</h3>
+          <p>
+            Kami merupakan tim kolaboratif yang menggabungkan keahlian dalam
+            analisis sistem, perancangan pengalaman pengguna (UI/UX),
+            pengembangan frontend, serta pengujian kualitas perangkat lunak.
+            Setiap anggota tim memiliki peran yang saling melengkapi untuk
+            menghasilkan solusi digital yang profesional dan berkelanjutan.
+          </p>
+        </div>
+
+        <!-- TEAM GRID -->
+        <div class="team-grid">
+
+  <a href="pages/about.html?member=imma" class="team-link">
+    <div class="team-card">
+      <img src="https://i.pravatar.cc/300?img=1" alt="Imma Latunnir Rilla" />
+      <div class="team-icon">
+        <i class="fa-solid fa-pen-nib"></i>
+      </div>
+      <h4>Imma Latunnir Rilla</h4>
+      <p>Padang</p>
+      <span>Sistem Informasi</span>
+    </div>
+  </a>
+
+  <a href="pages/about.html?member=selfina" class="team-link">
+    <div class="team-card">
+      <img src="https://i.pravatar.cc/300?img=2" alt="Selfina Syah Darma" />
+      <div class="team-icon">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <h4>Selfina Syah Darma</h4>
+      <p>Padang</p>
+      <span>Sistem Informasi</span>
+    </div>
+  </a>
+
+  <a href="pages/about.html?member=salsa" class="team-link">
+    <div class="team-card">
+      <img src="https://i.pravatar.cc/300?img=3" alt="Salsabilla Febriyanti" />
+      <div class="team-icon">
+        <i class="fa-solid fa-palette"></i>
+      </div>
+      <h4>Salsabilla Febriyanti</h4>
+      <p>Padang</p>
+      <span>Sistem Informasi</span>
+    </div>
+  </a>
+
+  <a href="pages/about.html?member=fakhri" class="team-link">
+    <div class="team-card">
+      <img src="https://i.pravatar.cc/300?img=4" alt="Muhammad Fakhri Ramadhan" />
+      <div class="team-icon">
+        <i class="fa-solid fa-users"></i>
+      </div>
+      <h4>Muhammad Fakhri Ramadhan</h4>
+      <p>Padang</p>
+      <span>Sistem Informasi</span>
+    </div>
+  </a>
+
+</div>
+
+       
+    </section>
+
+   <!-- ===== BLOG PREVIEW ===== -->
+<section class="section" id="blog">
+  <h2>Blog & Insight</h2>
+  <p>
+    Berbagai artikel, insight, dan pembahasan seputar dunia digital,
+    teknologi, dan kreativitas dari tim DIGIVORA.
+  </p>
+
+  <div class="blog-grid">
+
+    <!-- ARTIKEL 1 -->
+        <div class="blog-card">
+          <span class="blog-date">April 2024</span>
+          <h3>
+            Designing Digital Portfolio and Educational Platform for New Graphic
+            Designer
+          </h3>
+          <p>
+            Artikel ini membahas peran penting portofolio kreatif digital bagi
+            desainer grafis pemula sebagai sarana menunjukkan kemampuan dan
+            menarik klien.
+          </p>
+
+          <ul class="blog-meta">
+            <li>✔ Kategori: Graphic Design</li>
+            <li>✔ Tag: Digital Portfolio, UI/UX, Education</li>
+            <li>
+              🔗
+              <a
+                href="https://openlibrarypublications.telkomuniversity.ac.id/index.php/artdesign/article/view/23026"
+                target="_blank"
+              >
+                Baca Artikel
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ARTIKEL 2 -->
+        <div class="blog-card">
+          <span class="blog-date">Mei 2024</span>
+          <h3>Peran UI/UX Design dalam Meningkatkan Pengalaman Pengguna</h3>
+          <p>
+            UI/UX Design berperan penting dalam menciptakan aplikasi dan website
+            yang mudah digunakan, efisien, dan berorientasi pada pengguna.
+          </p>
+
+          <ul class="blog-meta">
+            <li>✔ Kategori: UI/UX Design</li>
+            <li>✔ Tag: User Experience, Interface Design</li>
+            <li>🔗 <a href="#">Baca Artikel</a></li>
+          </ul>
+        </div>
+
+        <!-- ARTIKEL 3 -->
+        <div class="blog-card">
+          <span class="blog-date">Juni 2024</span>
+          <h3>Pentingnya Website Portofolio bagi Mahasiswa IT</h3>
+          <p>
+            Website portofolio menjadi identitas digital mahasiswa IT untuk
+            menunjukkan skill, proyek, dan kesiapan masuk dunia kerja.
+          </p>
+
+          <ul class="blog-meta">
+            <li>✔ Kategori: Web Development</li>
+            <li>✔ Tag: Portfolio, Career, Web</li>
+            <li>🔗 <a href="#">Baca Artikel</a></li>
+          </ul>
+        </div>
+
+        <!-- ARTIKEL 4 -->
+        <div class="blog-card">
+          <span class="blog-date">Juni 2024</span>
+          <h3>Pentingnya Website Portofolio bagi Mahasiswa IT</h3>
+          <p>
+            Website portofolio menjadi identitas digital mahasiswa IT untuk
+            menunjukkan skill, proyek, dan kesiapan masuk dunia kerja.
+          </p>
+
+          <ul class="blog-meta">
+            <li>✔ Kategori: Web Development</li>
+            <li>✔ Tag: Portfolio, Career, Web</li>
+            <li>🔗 <a href="#">Baca Artikel</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+ini bagian index.html bagian
+
+    <!-- ===== PROJECT / PORTFOLIO PREVIEW ===== -->
+    <section class="section" id="portfolio">
+      <h2>Our Projects</h2>
+
+      <p>
+        Beberapa proyek dan karya digital yang telah kami kembangkan sebagai
+        bentuk penerapan keahlian dan kreativitas tim DIGIVORA.
+      </p>
+
+      <a href="pages/projects.html" class="btn-more"> Lihat Semua Project → </a>
+    </section>
+
+    <!-- ===== CONTACT PREVIEW ===== -->
+    <section class="section" id="contact">
+      <h2>Contact Us</h2>
+
+      <p>
+        Tertarik untuk berkolaborasi atau ingin mengenal DIGIVORA lebih dekat?
+        Jangan ragu untuk menghubungi kami.
+      </p>
+
+      <a href="pages/contact.html" class="btn-more"> Hubungi Kami → </a>
     </section>
 
     <!-- ===== FOOTER ===== -->

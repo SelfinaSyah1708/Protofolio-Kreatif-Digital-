@@ -1,44 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog | DIGIVORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">DIGIVORA</div>
+
+        <div class="nav-actions">
+          <div class="theme-toggle" id="themeToggle">🌙</div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
+
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a class="active" href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content content-wrapper">
+        <h1>Blog & Insight</h1>
+        <p>Artikel dan pemikiran seputar dunia digital.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Artikel Terbaru</h2>
+      <p>Berbagai insight dan pembahasan menarik dari tim DIGIVORA.</p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
+
+    <script src="../assets/js/navigation.js"></script>
+  </body>
+</html>
+
 <!-- Resume Section -->
-    <section id="resume" class="resume section">
+<section id="resume" class="resume section">
+  <!-- Section Title -->
+  <div class="container section-title">
+    <h2>Artikel</h2>
+    <p>
+      Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+      consectetur velit
+    </p>
+  </div>
+  <!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Artikel</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="experience-section">
+          <div class="section-header"></div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="experience-section">
-              <div class="section-header">
+          <div class="experience-cards">
+            <div
+              class="experience-card"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="card-header">
+                <div class="role-info">
+                  <h3>
+                    DESIGNING DIGITAL PORTFOLIO AND EDUCATIONAL PLATFORM FOR NEW
+                    GRAPHIC DESIGNER
+                  </h3>
+                  <h4></h4>
+                </div>
+                <span class="duration">April 2024</span>
+              </div>
+              <div class="card-body">
+                <p>
+                  Artikel ini membahas peran penting portofolio kreatif digital
+                  bagi desainer grafis pemula sebagai sarana menunjukkan
+                  kemampuan dan menarik klien. Penelitian ini merancang platform
+                  edukasi berbasis web yang membantu pengguna belajar desain
+                  sekaligus membangun portofolio secara terarah agar siap masuk
+                  dunia kerja.
+                </p>
+                <ul class="achievements">
+                  <li>Kategory: Graphic Design</li>
+                  <li>
+                    Tag: Digital Portfolio, Design Education, UI/UX Design,
+                    Beginner Designer, Creative Platform
+                  </li>
+                  <li>
+                    <a
+                      href="https://openlibrarypublications.telkomuniversity.ac.id/index.php/artdesign/article/view/23026"
+                      target="_blank"
+                      class="article-link"
+                    >
+                      https://openlibrarypublications.telkomuniversity.ac.id/index.php/
+                      artdesign/article/view/23026
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              <div class="experience-cards">
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="card-header">
-                    <div class="role-info">
-                      <h3>DESIGNING DIGITAL PORTFOLIO AND EDUCATIONAL PLATFORM FOR NEW GRAPHIC DESIGNER</h3>
-                      <h4></h4>
-                    </div>
-                    <span class="duration">April 2024</span>
-                  </div>
-                  <div class="card-body">
-                    <p>Artikel ini membahas peran penting portofolio kreatif digital bagi desainer grafis pemula sebagai sarana menunjukkan kemampuan dan menarik klien. Penelitian ini merancang platform edukasi berbasis web yang membantu pengguna belajar desain sekaligus membangun portofolio secara terarah agar siap masuk dunia kerja.</p>
-                    <ul class="achievements">
-                      <li>Kategory: Graphic Design</li>
-                      <li>Tag: Digital Portfolio, Design Education, UI/UX Design, Beginner Designer, Creative Platform</li>
-                      <li><a 
-    href="https://openlibrarypublications.telkomuniversity.ac.id/index.php/artdesign/article/view/23026"
-    target="_blank"
-    class="article-link"
-  >
-    https://openlibrarypublications.telkomuniversity.ac.id/index.php/
-    artdesign/article/view/23026
-  </a>
-</li>
-
-                    </ul>
-                  </div>
-                
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
