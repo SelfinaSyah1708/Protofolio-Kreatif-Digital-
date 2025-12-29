@@ -1,110 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us | Digital Professional Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About | DIGIVORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ===== NAVBAR ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">PORTFOLIO</div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#team" class="nav-link">Team</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">DIGIVORA</div>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-</header>
+        <div class="nav-actions">
+          <div class="theme-toggle" id="themeToggle">🌙</div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
-  <h1>Our Professional Team</h1>
-  <p>Digital Portfolio – Creative & Professional</p>
-</section>
+    <button class="btn-close" onclick="history.back()">✕</button>
 
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p class="section-desc">
-    Kami adalah tim mahasiswa yang berfokus pada pengembangan web dan desain digital profesional.
-  </p>
-</section>
+    <!-- ===== OVERLAY ===== -->
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-<!-- ===== TEAM ===== -->
-<section id="team" class="section team-section">
-  <h2>Team Members</h2>
+    <!-- ===== SIDE MENU ===== -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
 
-  <div class="team-container">
-
-    <!-- Member 1 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=1" alt="anggota">
-      <h3>Ahmad Rizki</h3>
-      <p><b>Asal:</b> Padang</p>
-      <p><b>Jurusan:</b> Teknik Informatika</p>
-      <p><b>Pendidikan:</b> S1 Informatika</p>
-      <p><b>Skills:</b> HTML, CSS, JavaScript</p>
-      <p><b>Visi:</b> Web Developer Profesional</p>
-      <p><b>Soft Skills:</b> Kerja Tim, Komunikasi</p>
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
-    <!-- Member 2 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=2" alt="anggota">
-      <h3>Siti Aisyah</h3>
-      <p><b>Asal:</b> Bukittinggi</p>
-      <p><b>Jurusan:</b> Sistem Informasi</p>
-      <p><b>Pendidikan:</b> S1 Sistem Informasi</p>
-      <p><b>Skills:</b> UI/UX, Figma</p>
-      <p><b>Visi:</b> UI Designer Handal</p>
-      <p><b>Soft Skills:</b> Kreatif, Leadership</p>
-    </div>
+    <section class="about-detail">
+      <div class="detail-wrapper">
+        <div class="detail-card vertical" id="profileCard">
+          <img id="profileImg" class="profile-img" />
+          <h2 id="profileName"></h2>
+          <p class="role" id="profileRole"></p>
 
-    <!-- Member 3 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=3" alt="anggota">
-      <h3>Andi Pratama</h3>
-      <p><b>Asal:</b> Solok</p>
-      <p><b>Jurusan:</b> Teknik Komputer</p>
-      <p><b>Pendidikan:</b> D4 Teknik Komputer</p>
-      <p><b>Skills:</b> Networking, Linux</p>
-      <p><b>Visi:</b> IT Support Profesional</p>
-      <p><b>Soft Skills:</b> Problem Solving</p>
-    </div>
+          <div class="detail-content" id="profileContent"></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Member 4 -->
-    <div class="team-card">
-      <img src="https://i.pravatar.cc/150?img=4" alt="anggota">
-      <h3>Dewi Lestari</h3>
-      <p><b>Asal:</b> Pariaman</p>
-      <p><b>Jurusan:</b> Manajemen Informatika</p>
-      <p><b>Pendidikan:</b> D3 MI</p>
-      <p><b>Skills:</b> Data Entry, Office</p>
-      <p><b>Visi:</b> Digital Administrator</p>
-      <p><b>Soft Skills:</b> Teliti, Disiplin</p>
-    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
 
-  </div>
-</section>
+    <!-- JS -->
+    <script>
+      const members = {
+        imma: {
+          name: "Imma Latunnir Rilla",
+          role: "UI/UX Designer",
+          img: "../assets/images/imma.jpeg",
+          content: `
+           <p>Nama  : Imma Latunir Rilla </p>
+          <p>Asal  : Padang</p>
+          <p>Jurusan : Sistem Informasi </p><br>
+          <p><strong>• Pendidikan</strong></p>
+          <p>2010–2016 : SDN 29 Ulak Karang</p>
+          <p>2016–2019 : SMPN 40 Padang</p>
+          <p>2019–2022 : SMAN 7 Padang</p><br>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Email: teamportfolio@email.com</p>
-</section>
+          <p><strong>  • Pengalaman</strong> : </p>
+          <p>2020-2021 UI Designer di PT Indofood</p><br>
 
-<script src="../assets/js/navigation.js"></script>
-</body>
+          <p><strong> • Keahlian</strong>   : </p>
+          <p>UI Design, UX Research, Prototyping</p><br>
+          <p><strong>• Soft Skills</strong>: </p>
+          <p> Komunikatif, mampu bekerja dalam tim</p><br>
+          <p><strong>• Visi</strong>: </p>
+          <p> Menciptakan desain antarmuka dan pengalaman pengguna yang efektif,
+          efisien, dan berorientasi pada kenyamanan pengguna.
+          </p><br>
+          <p><strong>• Misi</strong>: </p>
+          <p>Melakukan riset pengguna, menyusun alur dan prototype desain, serta
+          menghasilkan tampilan antarmuka yang selaras dengan kebutuhan sistem
+          dan tujuan bisnis.
+          </p><br>
+      `,
+        },
+
+        selfina: {
+          name: "Selfina Syah Darma",
+          role: "Frontend Developer",
+          img: "../assets/images/selfina.jpeg",
+          content: `
+        <p><strong>• Pendidikan</strong>: </p>
+          <p>2011–2017 : SDN 33 Padang</p>
+          <p>2017–2020 : SMPN 18 Padang</p>
+          <p>2020–2023 : SMAN 5 Padang</p><br>
+
+          <p><strong>• Pengalaman</strong> : </p>
+          <p>2020-2021 Programer di PT Unilever</p><br>
+
+          <p><strong>• Keahlian</strong> : </p>
+          <p>HTML5, CSS3, JavaScript</p><br>
+
+          <p><strong>• Soft Skills</strong>: </p>
+          <p>Teliti, komunikatif, mampu bekerja dalam tim</p><br>
+
+          <p><strong>• Visi</strong>:</p>
+          <p>Mengembangkan antarmuka website yang modern, responsif, dan memberikan
+          pengalaman pengguna yang optimal.
+          </p><br>
+
+          <p><strong>• Misi</strong>:</p>
+          <p>Menerjemahkan desain dan kebutuhan sistem ke dalam kode frontend yang
+          bersih, terstruktur, dan mudah dipelihara serta memastikan kompatibilitas
+          tampilan di berbagai perangkat.
+          </p><br>
+      `,
+        },
+
+        salsa: {
+          name: "Salsabila Febriyanti",
+          role: "UI/UX Designer",
+          img: "../assets/images/salsa.jpeg",
+          content: `
+         <p>Nama  : Salsabila Febriyanti </p>
+          <p>Asal  : Padang</p>
+          <p>Jurusan : Sistem Informasi </p><br>
+          <p><strong>• Pendidikan</strong>: </p>
+          <p>2010–2016 : SDN 37 Pengambiran</p>
+          <p>2016–2019 : SMPN 6 Padang</p>
+          <p>2019–2022 : SMKN 4 Padang </p><br>
+          <p><strong>• Pengalaman</strong> : </p>
+          <p>2020-2021 Programer di PT Wings</p><br>
+          <p><strong>• Keahlian</strong>: </p>
+          <p> Analisis Kebutuhan Sistem, Use Case Diagram 
+          </p><br>
+          <p><strong>• Soft Skills</strong>: </p>
+          <p> Komunikatif, analitis, problem solving</p><br>
+          <p><strong>• Visi</strong>: </p>
+          <p>Menghasilkan sistem informasi yang efektif, efisien, dan sesuai dengan
+          kebutuhan pengguna serta tujuan organisasi.
+          </p><br>
+          <p><strong>• Misi</strong>:</p>
+          <p> Menganalisis kebutuhan pengguna secara mendalam, menyusun spesifikasi sistem
+          yang jelas, dan memastikan sistem yang dikembangkan berjalan sesuai
+          dengan kebutuhan bisnis.
+          </p><br>
+      `,
+        },
+
+        fakhri: {
+          name: "Muhammad Fakhri Ramadhan",
+          role: "UI/UX Designer",
+          img: "../assets/images/fakhri.jpeg",
+          content: `
+        <p>Nama  : Muhammad Fakhri Ramadhan </p>
+        <p>Asal  : Padang</p>
+        <p>Jurusan : Sistem Informasi </p><br>
+
+        <p><strong>• Pendidikan</strong> : </p>
+        <p>2011–2016 : SDN Brnas </p>
+        <p>2016–2017 : SMP Swasta Al-haikmah</p>
+        <p>2017–2020 : MTSN 7 Padang</p>
+        <p>2020–2023 : SMAN 11 Padang </p><br>
+
+        <p><strong>• Pengalaman</strong> : </p>
+        <p>2020-2021 Asisten Labor "management akun" - di SMAN 11 Padang</p><br>
+
+        <p><strong>• Keahlian</strong> : </p>
+        <p>Software Testing, Functional Testing, Black Box Testing</p><br>
+
+        <p><strong>• Soft Skills</strong> :</p>
+        <p>Teliti, detail-oriented, analitis, dan mampu bekerja sama dengan tim pengembang</p><br>
+
+        <p><strong>• Visi</strong> :</p>
+        <p>
+          Menjamin kualitas sistem informasi agar berjalan stabil, bebas kesalahan
+          kritis, dan memberikan pengalaman terbaik bagi pengguna.
+        </p><br>
+
+        <p><strong>• Misi</strong> :</p>
+        <p>
+          Melakukan pengujian sistem secara menyeluruh, mendokumentasikan temuan bug
+          dengan jelas, serta berkolaborasi dengan tim pengembang untuk memastikan
+          perbaikan sistem berjalan optimal.
+        </p><br>
+      `,
+        },
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const member = params.get("member");
+
+      if (members[member]) {
+        document.getElementById("profileImg").src = members[member].img;
+        document.getElementById("profileName").innerText = members[member].name;
+        document.getElementById("profileRole").innerText = members[member].role;
+        document.getElementById("profileContent").innerHTML =
+          members[member].content;
+      }
+    </script>
+
+    <script src="../assets/js/navigation.js"></script>
+  </body>
 </html>

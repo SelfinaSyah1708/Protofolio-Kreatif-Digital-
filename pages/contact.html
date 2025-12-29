@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hubungi Portofolio Kreatif Digital">
-  <title>Contact | Portofolio Kreatif Digital</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact | DIGIVORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<header class="page-header">
-  <h1>Get in Touch</h1>
-  <p>Mari berkolaborasi atau berdiskusi</p>
-</header>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">DIGIVORA</div>
 
-<main class="contact-container">
-  <form id="contactForm">
+        <div class="nav-actions">
+          <div class="theme-toggle" id="themeToggle">🌙</div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <label for="name">Nama</label>
-    <input type="text" id="name" placeholder="Masukkan nama">
-    <small class="error"></small>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Masukkan email">
-    <small class="error"></small>
+    <div class="side-menu" id="sideMenu">
+      <div class="side-header">
+        <h2>DIGIVORA</h2>
+        <span class="close-btn" id="closeMenu">&times;</span>
+      </div>
 
-    <label for="message">Pesan</label>
-    <textarea id="message" placeholder="Tulis pesan Anda"></textarea>
-    <small class="error"></small>
+      <ul class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-    <button type="submit">Kirim Pesan</button>
-    <p id="successMessage"></p>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content content-wrapper">
+        <h1>Contact Us</h1>
+        <p>Hubungi kami untuk kolaborasi dan diskusi.</p>
+      </div>
+    </section>
 
-  </form>
-</main>
+    <section class="section">
+      <h2>Get in Touch</h2>
+      <p>Email: digivora@email.com</p>
+      <p>Instagram: @digivora</p>
+    </section>
 
-<footer class="footer">
-  <p>&copy; 2025 Portofolio Kreatif Digital</p>
-</footer>
+    <footer class="footer">
+      <p>© 2025 DIGIVORA | All Rights Reserved</p>
+    </footer>
 
-<script src="../assets/js/form-validation.js"></script>
-</body>
+    <script src="../assets/js/navigation.js"></script>
+  </body>
 </html>
