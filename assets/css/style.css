@@ -911,6 +911,8 @@ body.dark .btn-close {
   border-radius: 10px;
 }
 
+
+
 /* Modal */
 .modal {
   display: none;
@@ -2208,7 +2210,7 @@ body.dark .btn-close {
 /* DARK MODE */
 /* ============================= */
 body:not(.light) .detail-card.vertical {
-  background: linear-gradient(180deg, #4fbacf, #a09ce4);
+  background: linear-gradient(180deg, #8dd4e3, #8c89d5);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -2217,11 +2219,11 @@ body:not(.light) #profileName {
 }
 
 body:not(.light) .role {
-  color: #01050b;
+  color: #020913;
 }
 
 body:not(.light) .detail-content {
-  color: #d1d5db;
+  color: #020a17;
 }
 
 /* ============================= */
@@ -2584,4 +2586,177 @@ body.dark .contact-section > p {
   color: #6b7280;
   margin-bottom: 80px;
 }
+
+/* ===============================
+   FOOTER DIGIVORA UPDATE 
+================================ */
+.footer {
+  background: linear-gradient(180deg, #020617, #020617);
+  padding: 60px 20px 40px;
+  text-align: center;
+  margin-top: 120px; /* ⬅️ INI KUNCINYA */
+}
+
+.footer p {
+  color: #cbd5f5;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===== PROJECT GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* CARD */
+.project {
+  width: 100%;
+  height: 260px;              /* KUNCI TINGGI */
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0b1224;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(79,70,229,0.35);
+}
+
+/* IMAGE */
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔥 PENTING */
+  display: block;
+}
+
+
+/* TOMBOL CLOSE MODAL – TANPA LINGKARAN */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 44px;        /* AREA KLIK BESAR */
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: bold;
+  color: #3817e0;     /* warna silang */
+
+  background: transparent; /* ❌ HILANGKAN LINGKARAN */
+  border: none;
+
+  cursor: pointer;
+}
+
+/* hover cuma ganti warna silang */
+.close:hover {
+  color: #0b0b0b;
+}
+
+
+/* ===== PROJECT SECTION ===== */
+.project-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 42px;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px 32px;
+  max-width: 720px;
+  width: 92%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ===== MODAL CONTENT ===== */
+.modal-content {
+  position: relative;   /* INI PENTING */
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 25px 60px rgba(0,0,0,.25);
+}
+
+/* ===== CLOSE (X) FIX ===== */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  font-size: 26px;
+  font-weight: 600;
+  color: #334155;
+
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  color: #1e3a8a;
+}
+
 
